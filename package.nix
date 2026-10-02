@@ -7,11 +7,11 @@
 
 buildNpmPackage rec {
   pname = "cf";
-  version = "1.0.0-beta.9";
+  version = "1.0.0-beta.10";
 
   src = fetchurl {
     url = "https://registry.npmjs.org/cf/-/cf-${version}.tgz";
-    hash = "sha256-YHi8F/fj1L3yZ7jebev1g7YL10O3qesW8z3HKDavX08=";
+    hash = "sha256-0Wc7uZ/6A+PwPDeKWakBxPDrzXiHqqmTa74BLRFvKEo=";
   };
 
   postPatch = ''
@@ -19,7 +19,7 @@ buildNpmPackage rec {
     cp ${./package-lock.json} package-lock.json
   '';
 
-  npmDepsHash = "sha256-CGbRY6bflNQelWV5pPAdcBX+Ki3yFXIn2+/1VFcE8lo=";
+  npmDepsHash = "sha256-bhdS6FK38gW5POtlGBtPKQDPjvveGo4qGQAZYkXgxYw=";
 
   nodejs = nodejs_22;
   dontNpmBuild = true;
